@@ -64,6 +64,27 @@ def getstatus(url,backup,tol=1):
     consensus=round(len(peers[abs(peers['height']-peerheight)<=tol])/total*100,2) #calculates consensus from peer height
     return connectedpeers,peerheight,consensus,backupheights
 
+def getstatus(url,backup,tol=1):
+    #gets current height from the list of backup nodes
+    backupheights={}
+    for i in backup:
+        try:
+            backupheights[i]=getheight(i)
+        except:
+            backupheights[i]='not available'
+    try:
+        peers=getpeers(url)
+        total=len(peers)
+        peers=peers[peers['state']==2]    #filters to connected peers
+        connectedpeers=len(peers)
+        peerheight=peers['height'].mode()[0]    #calculates the mode height from connected peers
+        consensus=round(len(peers[abs(peers['height']-peerheight)<=tol])/total*100,2) #calculates consensus from peer height
+    except:
+        connectedpeers='not available'
+        peerheight='not available'
+        consensus='not available'
+    return connectedpeers,peerheight,consensus,backupheights
+
 def getheight(url):
     #gets current block height from the url node api
     height = requests.get(url+'api/blocks/getHeight').json()['height']
