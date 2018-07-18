@@ -110,7 +110,7 @@ def getchannelids(channelnames,apitoken):
             for group in grouplist:
                 if str(group.get('name')).lower() == name.lower():
                     id=group.get('id')
-            channelids[name]=id
+        channelids[name]=id
     return channelids
 
 def getuserlist(apitoken):
