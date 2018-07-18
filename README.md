@@ -4,18 +4,12 @@ A set of algorithms to analyze the blockchain and provide Slack notifications
 ## Notifications
 
 - Missed Blocks
-- Wallet Offline (In Development)
-- Network Consensus Below Threshold (In Development)
 
 ## Responses
 
-- Blockchain metric responses
-  - Block height, peers, consensus
-  - Inactive "red" nodes
-- Pools
-- Enhanced pool list responses
-  - Current rank 
-  - Recent productivity (In Development)
+- Height: Most common height accross peer nodes.
+- Red Nodes: Delegates that are missing blocks.
+- Delegate: Information about a certain delegate.
 
 ## Installation
 
@@ -32,7 +26,7 @@ A set of algorithms to analyze the blockchain and provide Slack notifications
 ## Configuration
 
 - slackapitoken: The apitoken assigned to your slackbot (ex: xoxb-############-###############)
-- apinode: The public node url or ip address for api requests (default https://wallet.lwf.io/)
+- apinode: The public node url or ip address for api requests (default http://127.0.0.1:5500/)
 - missedblockinterval: The number of consecutive missed blocks required to reissue a slack alert
 - minmissedblocks: The number of consecutive missed blocks required for an initial slack alert
 - channels: A list of channels to broadcast nofications on
