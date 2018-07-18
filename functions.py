@@ -281,7 +281,7 @@ def printdelegates(delegates,rank,limit):
 def insertblankrow(df,ind):
     """inserts a blank row into a dataframe at the specified index"""
     cols=list(df.columns.values)
-    blank=pd.Series([''],index=cols)
+    blank=pd.Series(['' for i in cols],index=cols)
     result=df.iloc[:ind].append(blank,ind)
     result=result.append(df.iloc[ind:],ind)
     return result
