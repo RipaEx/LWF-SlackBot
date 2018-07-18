@@ -19,6 +19,8 @@ A set of algorithms to analyze the blockchain and provide Slack notifications
 
 ```apt-get install python3-pip```
 
+```pip3 install pandas```
+
 ```pip3 install requests```
 
 ```pip3 install slackclient```
