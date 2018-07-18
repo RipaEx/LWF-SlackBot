@@ -1,26 +1,18 @@
 {
     "slackapitoken":"xoxb-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "apinode":"https://wallet.lwf.io/",
+    "apinode":"http://127.0.0.1:5500/",
     "backupnodes":[
-            "http://explorernode1.lwf.io:18124/",
-            "http://explorernode2.lwf.io:18124/",
-            "http://node1.lwf.io:18124/",
-            "http://node2.lwf.io:18124/",
-            "http://node4.lwf.io:18124/",
-            "http://explorer1.lwf.seatrips.eu:18124/",
-            "http://explorer2.lwf.seatrips.eu:18124/",
-            "http://lwf-mainexp-backup.tk:18124/"
+            "http://51.15.85.181:5500/",
+            "http://54.37.235.26:5500/",
+            "http://80.211.42.240:5500/"
             ],
-    "port":"18124",
+    "port":"5500",
     "blockintervalnotification":15000,
     "minmissedblocks":2,
     "channels":[
-            "lwf_mainnet",
-            "lwf_bot"
+            "ripa_bot"
             ],
     "users":[
             ],
-    "numdelegates":201,
-    "blockrewards":5,
-    "blockspermin":4
+    "numdelegates":101
 }
